@@ -1,0 +1,144 @@
+section.portfolio {
+
+  background: #ECE9E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ 
+}
+
+
+@media (min-width: 769px) {
+
+  section.portfolio {
+    justify-content: flex-end;
+  }
+
+}
+
+
+section.portfolio div.grid {
+
+  display: grid;
+  gap: 2em;
+
+  position: relative;
+  top:10px;
+
+}
+
+@media (min-width: 630px) {
+
+  section.portfolio div.grid {
+    grid-template-columns: repeat(2, 250px);
+    top: 22px
+  }
+
+}
+
+
+@media (min-width: 800px) and (max-width: 970px)  {
+
+  section.portfolio {
+
+    display: flex;
+    justify-content:right;
+    
+  }
+
+  section.portfolio div.grid {
+    grid-template-columns: 250px;
+    height: 530px;
+    overflow-y: scroll;
+    padding-right: 22px;
+    right: 192px;
+  }
+
+}
+
+@media (min-width: 971px)  {
+
+  section.portfolio {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  section.portfolio div.grid {
+    grid-template-columns: repeat(2, 250px);
+    height: 530px;
+    overflow-y: scroll;
+    padding-right: 50px;
+    right: 292px;
+  }
+
+}
+
+
+
+@media (min-width: 1200px)  {
+
+
+  section.portfolio div.grid {
+
+    right:92px;
+    grid-template-columns: repeat(3, 250px);
+
+
+  }
+
+}
+
+
+@media (min-width: 970px) and (min-height: 550px)   {
+
+  section.portfolio div.grid {
+    overflow-y: initial;
+  }
+
+}
+
+
+section.portfolio figure {
+  text-align: center;
+}
+
+
+
+section.portfolio figure img {
+
+  border-radius: 5%;
+  box-shadow: 1px 1px 1px #ccc2;
+  transition: transform .5s;
+}
+
+
+section.portfolio figure img:hover {
+  transform: scale(1.2);
+}
+
+section.portfolio figure:nth-of-type(even) img:hover {
+  transform: rotate(-2deg);
+}
+
+section.portfolio figure:nth-of-type(odd) img:hover {
+  transform: rotate(2deg);
+}
+
+
+
+.img-portfolio {
+  height: 220px;
+  width: 220px;
+/*  
+  object-fit: cover;
+  object-position: left bottom;
+*/
+}
+
+
+section.portfolio figure figcaption {
+
+  color: #4f4f4f99;
+  font:1.2em Arial, sans-serifs;
+  font-variant: small-caps;
+
+} 

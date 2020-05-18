@@ -1,0 +1,25 @@
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu li a {
+  color: #186059;  
+  display: inline-block;
+  font-size: 0.8em;
+  padding: 10px 10px;
+}
+
+@media (min-width:769px) {
+
+  .menu li a {
+    padding: 10px 40px;
+    font-size: 1em;
+  }
+  
+}

@@ -1,0 +1,49 @@
+/**
+
+  FOOTER
+
+*/
+
+footer {
+  display: none;
+  flex-direction: column;
+  align-self: center;
+}
+
+footer > * {
+  align-self: center;
+}
+
+footer p {
+  text-align: center; 
+  color: #fff;
+  font:18px 'Montserrat', sans-serif;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+footer cite { 
+  align-self: center;
+  color: rgb(00, 00, 49);
+  font:300 20px 'Montserrat', sans-serif;
+}
+
+footer cite a {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+footer cite a:hover {
+  text-decoration: none;
+}
+
+footer a.github {
+  justify-content: center;
+  margin-top:15px;
+  filter: opacity(.5);
+  transition: 1s linear;
+}
+
+footer a.github:hover {
+  filter: opacity(.8);
+}
