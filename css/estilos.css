@@ -1,48 +1,169 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,600&display=swap");
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+@import "reset.css";
+@import "links.css";
+
+/* non-hierarchial import */
+@import "header.css";
+@import "article.css";
+@import "menu.css";
+@import "footer.css";
+
+@import "section.batepapo.css";
+@import "section.portfolio.css";
+@import "section.toaqui.css";
+
+@import "horizontalscroll.css";
+
+
+html {
+ scroll-behavior: smooth;
+
 }
 
 body {
+
   background-color: #000;
+  font:12px 'Montserrat', sans-serif;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
+  width: 100vw;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: rgba(0,0,0,.01) 0 0 1px;
+
 }
 
 
-.menu {
-  height: 40px;
-  padding: 20px 0;
-}
-
-.menu ul {
-  display: flex;
-  justify-content: space-around;
-}
-
-.menu li {
-  list-style: none;
+p {
+ 
+  font-size: 1.8em;
+  line-height: 0.4em;
+  color: antiquewhite;
+  margin-bottom: 22px;
+  
 }
 
 
-a {
-  color:whitesmoke;
-  border-left:2px transparent #fff;
-  font-family: 'Montserrat', sans-serif;
-  text-decoration: none;
-  outline: none;
+
+
+@media (min-width:769px) {
+
+  article { 
+    max-width: 70vw;
+    padding-right: 110px;
+  }
+
 }
 
-a:hover {
-  text-decoration: underline;
+article p {
+ 
+  font-size: 1.8em;
+  line-height: 1.4em;
+  color: antiquewhite;
+  margin-bottom: 22px;
+  
 }
 
-a:active {
-  text-decoration: line-through;
+
+
+section {
+  position: relative;
+}
+
+section h1 {
+  font-size: 4.5em;
+  font-weight: 800;
+  letter-spacing: -7px;
+  
+  position: absolute;
+  transform: rotate(90deg) ;
+  z-index: 5;
+}
+
+section h1 a {
+  opacity: 0.3;
+}
+
+@media (min-width: 769px) {
+
+  section h1 {
+    display: block;
+    transform: rotate(0deg);
+  }
+  
+}
+
+section h1 span {
+
+  background-color: transparent;
+  
+  opacity: 0.7;
+  display: block;
+  height: 100%;
+
+
+  position:absolute;
+  right:0;
+  top:0;
+
+}
+
+section.sobre h1 span { width: 82%; }
+section.portfolio h1 span { width: 86.6%; }
+section.batepapo h1 span { width: 89%; }
+section.toaqui h1 span { width: 84.5%; }
+
+/*
+section h1 { top: 50vh }
+*/
+
+
+
+/* h1 positons */
+section.sobre h1 { left: -55px; top: 60px; }/*18px;*/
+section.portfolio h1 { left: -85px; top: 82px; /*45px*/ }
+section.batepapo h1 { left: -108px; top: 108px; /*69px*/ }
+section.toaqui h1 { left: -70px; top: 73px; /*33px*/}
+
+
+section.portfolio h1 a { color: #111; opacity: 0.7 }
+section.batepapo h1 a { color: #fff; opacity: 1 }
+section.toaqui h1 a { color: #66c; opacity: 0.9 }
+
+
+
+@media (min-width:769px) {
+
+  section h1 { top: 45vh }
+
+  section h1 {
+    font-size: 7.2em;
+    left: calc(100vw - 42px);
+    letter-spacing: -14px;
+    top: calc(50vh - 78px);
+  }
+
+  section h1 a { opacity: 0.6 }
+
+  section.sobre h1 { left: -60px; top: 37vh }
+  section.portfolio h1 { left: -60px; top: 37vh }
+  section.batepapo h1 { left: -60px; top: 37vh }
+  section.toaqui h1 { left: -60px; top: 37vh }
+  
+} /* END @media */
+
+
+
+@media (min-width:769px) {
+
+  section h1 {
+   
+    font-size: 9.2em;
+    left: calc(100vw - 60px);
+    
+  }
+
 }
 
 /**
@@ -53,122 +174,67 @@ a:active {
 
 
 
-header {
-  min-height: 65%;
+section {
+  padding: 50px 0;
 }
 
-header > * {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-}
-
-header h2 { 
-  font-size: 1.2em;
-}
-
-header:hover:before {
-  --blur: 0;
-  -webkit-filter: blur(var(--blur));
-  -moz-filter: blur(var(--blur));
-  -o-filter: blur(var(--blur));
-  -ms-filter: blur(var(--blur));
-  filter: blur(var(--blur));
-}
-
-header:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  height: 100vh;
-  width: 100vw;
-
-  background-color: rgba(80,58,143,1);
-  background-image: url(../imagens/imersaohipsterscss.png);
-  
-  background-position: center center;
-  
-  background-size: 50%;
-  background-repeat: no-repeat;
-
-  --transition_blur:.3s ease-in-out;
-  -webkit-transition: var(--transition_blur);
-  transition: var(--transition_blur);
-
-  --blur: 5px;
-  -webkit-filter: blur(var(--blur));
-  -moz-filter: blur(var(--blur));
-  -o-filter: blur(var(--blur));
-  -ms-filter: blur(var(--blur));
-  filter: blur(var(--blur));
-}
-
-.site-title,
-.site-subtitle {
-  text-align: center;
-  font-style: italic;
-}
-
-.site-title {
-  color:whitesmoke;
-  font-size: 4em;
-  letter-spacing: -5px;
-  margin-top: 80px;
-  text-shadow: 2px 2px #0002;
-}
-
-.site-subtitle {
-  color: rgb(42, 22, 95);
+section:not([id]) {
+  display: none;
 }
 
 
-/**
+section.sobre {
+    
+  background: #c31432;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  FOOTER
+  justify-content: center;
 
-*/
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
 }
 
-footer > * {
-  align-self: center;
+@media (min-width: 769px) {
+
+  section.sobre {
+    justify-content: flex-end;
+  }
+
 }
 
-footer p {
-  text-align: center; 
-  color: #fff;
-  font:18px 'Montserrat', sans-serif;
-  margin-bottom: 16px;
-  font-style: italic;
+section.sobre h2::before {
+  content: "# ";
 }
 
-footer cite { 
-  align-self: center;
-  color: rgb(00, 00, 49);
-  font:300 20px 'Montserrat', sans-serif;
+section.sobre h2 {
+  color: #ff729a;
+  font-size: 1.83em;
+  margin: 45px 0 4px;
 }
 
-footer cite a {
+section.sobre article ul {
+  list-style-position: inside;
+}
+
+section.sobre article li {
+  line-height: 35px;
+  color: #ff729a;
+  font-size: 1.83em;
+
+}
+
+section.sobre article p mark {
+  display: inline-block;
+  padding: 0 6px;
+}
+
+section.sobre article a {
+
+  color: #FFFF00;
   text-decoration: underline;
-  font-style: italic;
+
 }
 
-footer cite a:hover {
+section.sobre article a:hover {
   text-decoration: none;
 }
 
-footer a.github {
-  justify-content: center;
-  margin-top:15px;
-  filter: opacity(.5);
-  transition: 1s linear;
-}
-
-footer a.github:hover {
-  filter: opacity(.8);
-}

@@ -1,0 +1,56 @@
+
+a {
+  color:whitesmoke;
+  cursor: pointer;
+  border-left: 2px transparent #fff;
+  outline: none;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: line-through;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.mentores a:after {
+  content: "♥";
+}
+
+section.batepapo p a {
+  text-decoration: underline;
+}
+
+
+section.batepapo p a:hover {
+  text-decoration:none;
+}
+
+
+section.toaqui .icons a {
+  font-size: 5em;
+  transition: all ease .3s;
+
+}
+
+
+@media (min-width: 600px) {
+
+  section.toaqui .icons a {
+    font-size: 6em;
+  }
+
+}
+
+
+section.toaqui .icons a:active,
+section.toaqui .icons a:hover {
+
+  text-decoration: none;
+  text-shadow: 1px 1px 12px rgba(11, 11, 14, 1);
+
+}
+

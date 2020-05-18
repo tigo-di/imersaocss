@@ -1,0 +1,47 @@
+/* BEGIN - horizontalscroll */
+
+header,
+section {
+  min-height: 80vh;
+  width: 100vw;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+
+}
+
+.horizontal-scroll-wrapper {
+
+  display: flex;
+  justify-content:center;
+  flex-direction: column
+
+}
+
+@media (min-width: 769px) and (min-height: 390px) {
+
+  body {
+    overflow-x:visible;
+    overflow-y: hidden;
+  }
+
+  .horizontal-scroll-wrapper {
+
+    justify-content:initial;
+    flex-direction:initial;
+
+    flex-wrap: nowrap;
+    overflow-x:visible;
+  
+  } 
+  header,
+  section {
+    flex: 0 0 auto;
+    height: 100vh;
+  }
+
+}
+
+
+/* END - scroll horizontal */
+

@@ -1,0 +1,88 @@
+header {
+  background: #34e89e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0f3443, #34e89e);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0f3443, #34e89e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+header nav {
+
+  background-color: #fff;
+  box-shadow: 0 0 5px #333;
+  position: fixed;
+  top:0;
+  width: 100vw;
+  z-index: 9;
+
+}
+
+header > * {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 1.7em;
+}
+
+header h1 { 
+  line-height: 0.88em;  
+  transform: translateX(5vw);
+  opacity: 0;
+  
+  animation: ease-out .9s animeTitle forwards;
+  
+}
+
+@keyframes animeTitle {
+
+  0% {
+    transform: translateX(5vw);
+    opacity: 0;
+  
+  }
+  
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+}
+
+
+
+
+
+@media (min-width:769px) {
+  heaader h1 { 
+    line-height:initial;
+  }
+}
+
+
+
+header h2 { 
+  font-size: 1.2em;
+}
+
+
+
+header .site-title,
+.site-subtitle {
+  text-align: center;
+  font-style: italic;
+}
+
+header .site-title {
+  color:whitesmoke;
+  font-size: 4em;
+  letter-spacing: -5px;
+  text-indent: -13px;
+  text-shadow: 2px 2px #0002;
+}
+
+header .site-subtitle {
+  color: #0F3443;
+  position: relative;
+  z-index: 4;
+}
+
+
+

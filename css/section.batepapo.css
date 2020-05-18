@@ -1,0 +1,111 @@
+
+  section.batepapo {
+
+    background: #34e89e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #0f3443, #34e89e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #0f3443, #34e89e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+
+  }
+
+
+  @media (min-width: 800px) and (min-height: 360px) and (max-height: 390px) {
+
+    section.batepapo {
+      height: 120vh;
+
+    }
+
+  }
+
+
+  section.batepapo p {
+    
+    font-size: 1.8em;
+    line-height: 30px;
+    text-align: center;
+    transition: all ease-in-out 0.2s;
+    padding: 12px 12px;
+    color: #000;
+
+  }
+
+
+  section.batepapo p a {
+ 
+    background-color: #615DBD;
+    border-radius: 5px;
+    box-shadow: 0 0 2px #333;
+    color: #fff;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    text-decoration: none;
+
+  }
+
+
+
+@media (min-width: 769px) {
+
+  section.batepapo {
+
+    justify-content:left; /* in horizontal scroll */
+
+    background: #34e89e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0f3443, #34e89e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0f3443, #34e89e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  section.batepapo p {
+  
+    text-align: left;
+    line-height: 11px;
+    margin-top: 191px;
+    margin-left: 45px;
+
+  }
+
+
+  section.batepapo p a {
+ 
+    background-color: initial;
+    border-radius: initial;
+    box-shadow: initial;
+    color: #fff;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    text-decoration: underline;
+
+  }
+
+
+
+}
+
+
+section.batepapo .e-mail:before {
+  content: attr(data-website) "\0040" attr(data-user);
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  font-size: 20px;
+}
+
+
+
+section.batepapo .e-mail:before {
+  font-size: 1.2em;
+}
+@media (min-width: 769px) {
+
+  section.batepapo .e-mail:before {
+    font-size: 2.0em;
+  }
+
+}
